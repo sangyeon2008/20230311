@@ -1,0 +1,25 @@
+def make_apart(층,호):
+    apart = []
+    for i in range(1, 층+1):
+        A=[]
+        for j in range(1, 호+1):
+            A.append(f"{i}층,{i*100+j}호")
+            apart.append(A)
+    return apart
+층 = int(input())
+호 = int(input())
+
+print(make_apart(층,호))
+# apartment = [['101호','102호'],
+#             ['201호','202호'],
+#             ['301호','302호']]
+
+
+apartment = make_apart(층,호)
+info = [['1명','3명'],['2명','0명'],['3명','6명']]
+for i in range(1,호 + 1):
+    for i in range(1, 층+1):
+        B=[]
+        for j in range(1, 호+1):
+            B.append({f"{i*100+j}호 :{info[i][j]}")
+            apartment.append(B+"{}")
